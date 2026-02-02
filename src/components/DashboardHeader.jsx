@@ -7,6 +7,9 @@ function DashboardHeader() {
                 <NavLink to="/dashboard">
                     Dashboard
                 </NavLink>
+                <NavLink to="/dashboard/settings">
+                    Dashboard Settings
+                </NavLink>
             </nav>
         </header>
     );
