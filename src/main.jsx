@@ -16,6 +16,10 @@ createRoot(document.getElementById('root')).render(
         <Route index element={<Dashboard />}/>
         <Route path='settings' element={<DashboardSettings />}/>
       </Route>
+      <Route path='cities'>
+        <Route index element={<Cities />}/>
+        <Route path=':citySlug' element={<City />}/>
+      </Route>
     </Routes>
   </BrowserRouter>,
 )
