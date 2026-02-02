@@ -1,10 +1,15 @@
 import { CITIES } from "../data/cities";
 
 function City() {
-    const city = CITIES.find((c) => c.slug)
+    const {citySlug} = useParams();
+    const city = CITIES.find((c) => c.slug === citySlug);
 
     return (
-        <div></div>
+        <div>
+            <h1>{city.name}</h1>
+            <h2>{city.country}</h2>
+            <p>{city.population} Million</p>
+        </div>
     );
 }
 
