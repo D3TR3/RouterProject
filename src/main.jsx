@@ -5,13 +5,14 @@ import Home from './pages/Home'
 import App from './App'
 import Dashboard from './pages/Dashboard'
 import DashboardSettings from './pages/DashboardSettings'
+import DashboardLayout from './layouts/DashboardLayout'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />} />
       <Route path='home' element={<Home />} />
-      <Route path='dashboard'>
+      <Route path='dashboard' element={<DashboardLayout />}>
         <Route index element={<Dashboard />}/>
         <Route path='settings' element={<DashboardSettings />}/>
       </Route>
