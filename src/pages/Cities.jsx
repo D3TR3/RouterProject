@@ -1,8 +1,13 @@
+import CitiesList from "../components/CitiesList";
+
 function Cities() {
     return ( 
-        <div>
-            <h1>Cities</h1>
-        </div>
+        <>
+        <h1>Cities</h1>
+        <CitiesList />
+        </>
+            
+
     );
 }
 
