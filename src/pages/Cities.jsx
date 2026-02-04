@@ -6,8 +6,6 @@ function Cities() {
         <h1>Cities</h1>
         <CitiesList />
         </>
-            
-
     );
 }
 
