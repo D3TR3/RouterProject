@@ -6,11 +6,13 @@ import App from './App'
 import Dashboard from './pages/Dashboard'
 import DashboardSettings from './pages/DashboardSettings'
 import DashboardLayout from './layouts/DashboardLayout'
+import NotFound from './pages/NotFound'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />} />
+      <Route path='/not-found' element={<NotFound /> } />
       <Route path='home' element={<Home />} />
       <Route path='dashboard' element={<DashboardLayout />}>
         <Route index element={<Dashboard />}/>
@@ -20,6 +22,8 @@ createRoot(document.getElementById('root')).render(
         <Route index element={<Cities />}/>
         <Route path=':citySlug' element={<City />}/>
       </Route>
+    
+  <Route path='*' element={<Navigate to={"/not-found"} replace />} />
     </Routes>
   </BrowserRouter>,
 )
