@@ -4,6 +4,10 @@ function City() {
     const {citySlug} = useParams();
     const city = CITIES.find((c) => c.slug === citySlug);
 
+    if (!city) {
+        return <Navigate to={"/not-found"} replace/>
+    }
+
     return (
         <div>
             <h1>{city.name}</h1>
