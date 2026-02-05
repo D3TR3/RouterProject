@@ -7,12 +7,14 @@ import Dashboard from './pages/Dashboard'
 import DashboardSettings from './pages/DashboardSettings'
 import DashboardLayout from './layouts/DashboardLayout'
 import NotFound from './pages/NotFound'
+import Login from './pages/Login'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />} />
       <Route path='/not-found' element={<NotFound />} />
+      <Route path='login' element={<Login />}/>
       <Route path='home' element={<Home />} />
       <Route path='dashboard' element={<DashboardLayout />}>
         <Route index element={<Dashboard />} />
